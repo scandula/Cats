@@ -1,0 +1,40 @@
+describe('log file creation', function() {
+     
+    var log4js = require('D:/ProtracorTest/Protractor/npm-3.10.6/npm-3.10.6/bin/node_modules/log4js');
+    
+     log4js.configure({
+           appenders: [
+           {
+        //       { "type" = "console" },
+           type:"file",
+           filename:"D:/ProtracorTest/Ecommerce/log4js.log",
+           maxLogSize:20480,
+           backups:3,
+           category:"relative-logger"
+        
+           }
+           ]
+           });
+    var logger = log4js.getLogger('relative-logger');
+    var email = element(by.xpath("//input[@id='signInEmail']"));
+    var password = element(by.xpath("//input[@id='signInPassword']"));
+    var login = element(by.xpath("//div[@id='dynamic-content']/form/div/div/div/div[4]/button"));
+
+
+it('should create log file', function() {
+
+
+    browser.get('http://ecommerce.aisel.co/en/');
+    browser.driver.manage().window().maximize();
+    element(by.xpath("html/body/header/div/div/div[2]/ul[2]/li[2]/a")).click();
+    logger.info('clicked');
+    email.click();
+    email.sendKeys("arzoomalik94@gmail.com");
+    logger.info('email id written');
+    password.click();
+    password.sendKeys("arzoomalik");
+    logger.info('password written');
+    login.click();  
+    logger.info('login button clicked');
+ });
+ });
