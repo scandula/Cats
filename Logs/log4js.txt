@@ -1,0 +1,5 @@
+[2016-09-01 11:08:39.364] [INFO] relative-logger - clicked on dashboard
+[2016-09-01 11:08:42.109] [INFO] relative-logger - clicked on createAccount
+[2016-09-01 11:08:43.444] [INFO] relative-logger - clicked on email
+[2016-09-01 11:08:43.931] [INFO] relative-logger - clicked on password
+[2016-09-01 11:08:44.045] [INFO] relative-logger - New account has been created successfully
